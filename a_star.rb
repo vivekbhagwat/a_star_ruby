@@ -25,6 +25,15 @@ def h2(square)
   man_dist
 end
 
+def h3(square)
+  own_dist = 0
+  
+  # do something with "blocks" of ungrouped tiles, 
+  # translate that into number of moves based on size
+  
+  own_dist
+end
+
 def one_dimension_to_two(k)
   [k / 3, k % 3]
 end
