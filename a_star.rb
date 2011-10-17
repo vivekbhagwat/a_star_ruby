@@ -29,14 +29,8 @@ def h2(square)
   man_dist
 end
 
-def two_dimensions_to_one(i,j)
-  3*i + j
-end
-
 def one_dimension_to_two(k)
-  j = k % 3
-  i = k / 3
-  [i,j]
+  [k / 3, k % 3]
 end
 
 square = ([Array.new(3)] << Array.new(3) << Array.new(3))
