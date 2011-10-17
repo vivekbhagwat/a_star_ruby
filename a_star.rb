@@ -34,6 +34,17 @@ def h3(square)
   own_dist
 end
 
+def at_goal(square)
+  square.each_with_index do |row,i|
+    row.each_with_index do |cell,j|
+      if cell != @goal_square[i][j]
+        return false
+      end
+    end
+  end
+  return true
+end
+
 def generate_random_square(n=3)
   rand_square = Marshal.load(Marshal.dump(@goal_square))
   nil_index = [0,0]
