@@ -35,9 +35,13 @@ def h3(square)
 end
 
 def at_goal(square)
+  same_state(square,@goal_square)
+end
+
+def same_state(square,other_square)
   square.each_with_index do |row,i|
     row.each_with_index do |cell,j|
-      if cell != @goal_square[i][j]
+      if cell != other_square[i][j]
         return false
       end
     end
